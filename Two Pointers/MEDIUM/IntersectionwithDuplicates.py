@@ -11,17 +11,17 @@ def intersectionwithDuplicates(nums1,nums2):
     nums2.sort()
     result=[]
     
-    one,two=0,0        #initializing 2 pointers for both arrays
+    p1,p2=0,0    #initializing 2 pointers for both arrays
     
-    while one<len(nums1) and two<len(nums2):
-        if nums1[one]==nums2[two]:
-            result.append(nums1[one])
-            one+=1
-            two+=1
-        elif nums1[one]<nums2[two]:
-            one+=1
+    while p1<len(nums1) and p2<len(nums2):
+        if nums1[p1]==nums2[p2]:
+            result.append(nums1[p1])
+            p1+=1
+            p2+=1 
+        elif nums1[p1]<nums2[p2]:
+            p1+=1
         else:
-            two+=1
+            p2+=1
     return result
 
 
