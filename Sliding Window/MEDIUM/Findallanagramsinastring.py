@@ -17,7 +17,7 @@ def findAnagrams (s,p):
     if window_count == p_count:
         res.append(0)
 
-        for i in range(len_p,len_s):     #len_p to len_s because we increment right pointer 
+    for i in range(len_p,len_s):     #len_p to len_s because we increment right pointer 
         window_count[s[i]] += 1  # Add the new character to the window
         # left pointer is at i - len_p, removing it
         window_count[s[i - len_p]] -= 1  # Remove the character going out 
@@ -28,3 +28,9 @@ def findAnagrams (s,p):
             res.append(i-len_p + 1)  
     return res
       
+    
+#example usage
+s='iamgreatestofthegreatest'
+p='greatest'
+print(findAnagrams(s,p))  
+# output : [3, 16]
