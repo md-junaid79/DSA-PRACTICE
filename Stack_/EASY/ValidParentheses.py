@@ -21,7 +21,7 @@ def isStringValid(s):
         if ch in openb:
             stack.append(ch)
         elif ch in closeb:
-            if not stack or stack[-1] != closeb[ch]:
+            if not stack or stack[-1] != closeb[ch]:         #if stack is empty or last element is mismatched
                 return False
             stack.pop()
 

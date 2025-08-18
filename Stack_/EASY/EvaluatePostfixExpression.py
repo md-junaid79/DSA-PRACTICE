@@ -50,4 +50,8 @@ def evaluatePostfix(expression):
         
 # Example usage
 print(evaluatePostfix("2 3 +"))  # Output: 5
+
+print(evaluatePostfix("10 2 /")) # Output: 5
+print(evaluatePostfix("2 10 /")) # Output: 0
+
 print(evaluatePostfix("5 1 2 + 4 * + 3 -"))  # Output: 14
