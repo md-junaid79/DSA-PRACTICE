@@ -8,7 +8,7 @@ def dailyTemperatures(arr):
     stack = []         # stores indices of temperatures
 
     for i in range(n):
-        while stack and arr[i] > arr[stack[-1]]:
+        while stack and arr[i] > arr[stack[-1]]:      #current day is warmer than the last unresolved day
             prev_index = stack.pop()
             answer[prev_index] = i - prev_index  # days waited
         stack.append(i)
